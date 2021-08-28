@@ -51,7 +51,7 @@ except ImportError:
             _ = os.system('pip3 install requests')
     except Exception as e:
         try:
-            _ = os.system('pip3 install requests')
+            os.system('pip3 install requests')
         except Exception as ee:
             print("|--------------------------------------------------|")
             print("| ERROR #1 : SOMETHING WRONG HERE.                 |")
