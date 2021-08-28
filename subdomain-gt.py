@@ -50,14 +50,17 @@ except ImportError:
         else:
             _ = os.system('pip3 install requests')
     except Exception as e:
-        print("|--------------------------------------------------|")
-        print("| ERROR #1 : SOMETHING WRONG HERE.                 |")
-        print("|--------------------------------------------------|")
-        print("|                    ERROR MESSAGE                 |")
-        print("|--------------------------------------------------|")
-        print(str(e))
-        print("|--------------------------------------------------|")
-        sys.exit()
+        try:
+            _ = os.system('pip3 install requests')
+        except Exception as ee:
+            print("|--------------------------------------------------|")
+            print("| ERROR #1 : SOMETHING WRONG HERE.                 |")
+            print("|--------------------------------------------------|")
+            print("|                    ERROR MESSAGE                 |")
+            print("|--------------------------------------------------|")
+            print(str(ee))
+            print("|--------------------------------------------------|")
+            sys.exit()
 
 import requests
 
