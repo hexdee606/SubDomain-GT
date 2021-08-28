@@ -118,8 +118,6 @@ def welcome_message():
     print("# {:<17} : {:<40} #".format("Tester", "Itachi-91"))
     print("# {:<17} : {:<40} #".format("Tester", "athena-077"))
     print("################################################################")
-    print("# {:<17} : {:<40} #".format("Thanks to", "rbsec"))
-    print("################################################################")
 
 
 clear()
@@ -127,7 +125,7 @@ welcome_message()
 print("# {:<60} #".format("Downloading subdomain list . . ."))
 print("################################################################")
 try:
-    git_url = "https://raw.githubusercontent.com/rbsec/dnscan/master/subdomains.txt"
+    git_url = "https://raw.githubusercontent.com/hexdee606/SubDomain-GT/master/subdomains.txt"
     with open("subdomains.txt", "wb") as git_file:
         git_response = requests.get(git_url)
         git_file.write(git_response.content)
@@ -139,7 +137,7 @@ subdomain_count = 0
 try:
     clear()
     welcome_message()
-    print("# {:<60} #".format("This script scans 1000 common subdomain"))
+    print("# {:<60} #".format("This script scans up to 1000 common subdomain"))
     print("################################################################")
     domain = input("Please Enter domain name [example: google.com]: ")
     clear()
